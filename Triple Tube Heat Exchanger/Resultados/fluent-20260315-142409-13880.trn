@@ -1,0 +1,65 @@
+Auto-Transcript Start Time:  14:24:09, 15 Mar 2026 Hora Padrão da Argentina 
+Current Directory: "D:\Livro_CFD\OUTROS_MODELOS\TROCADOR_CALOR\Resultados"
+
+              Welcome to ANSYS Fluent 2025 R2.04
+
+              Copyright 1987-2025 ANSYS, Inc. All Rights Reserved.
+              Unauthorized use, distribution or duplication is prohibited.
+              This product is subject to U.S. laws governing export and re-export.
+              For full Legal Notice, see documentation.
+
+Build Time: Oct  7 2025 15:34:38 EDT  Build Id: 10205  
+ 
+Connected License Server List:	<Shared_Web_License_Server>
+
+     --------------------------------------------------------------
+     This is a student version of ANSYS FLUENT. Usage of this product
+     license is limited to the terms and conditions specified in your ANSYS
+     license form, additional terms section.
+     --------------------------------------------------------------
+Host spawning Node 0 on machine "DESKTOP-NB0TTJF" (win64).
+
+--------------------------------------------------------------------------------
+ID    Hostname         Core  O.S.         PID   Vendor                          
+--------------------------------------------------------------------------------
+n0    DESKTOP-NB0TTJF  1/6  Windows-x64  1288  Intel(R) Core(TM) i5-9400F      
+host  DESKTOP-NB0TTJF       Windows-x64  9324  Intel(R) Core(TM) i5-9400F      
+
+MPI Option Selected: intel
+--------------------------------------------------------------------------------
+
+Cleanup script file is D:\\Livro_CFD\\OUTROS_MODELOS\\TROCADOR_CALOR\\Resultados\\cleanup-fluent-DESKTOP-NB0TTJF-9324.bat
+
+Graphics driver currently in use: dx11
+
+(cx-gui-do cx-activate-tab-index "NavigationPane*Frame1(TreeTab)" 0)
+
+Meshing> (cx-gui-do cx-activate-item "MenuBar*ReadSubMenu*Case...")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "D:/Livro_CFD/OUTROS_MODELOS/NICOLE_TATIANA_NETMIX/Book_Chapter/CFDpost/48X_new.cas") "All Case Files (*.cas* *.msh* *.MSH* )")
+Reading "D:/Livro_CFD/OUTROS_MODELOS/NICOLE_TATIANA_NETMIX/Book_Chapter/CFDpost/48X_new.cas"...
+3D mesh
+
+
+cells: 980338
+faces: 3106844
+nodes: 1151090
+skipping cell partition section for zone 3.
+skipping unknown section 3041.
+   90368 "48x_irradiance" point-profile points, x, y, z, irradiance.
+   90368 "63x_irradiance" point-profile points, x, y, z, irradiance.
+   90368 "63f_1filtro_irradiance" point-profile points, x, y, z, irradiance.
+   90368 "48f_1filtro_irradiance" point-profile points, x, y, z, irradiance.
+   90368 "66x_irradiance" point-profile points, x, y, z, irradiance.
+   90368 "66f_irradiance" point-profile points, x, y, z, irradiance.
+	Zone id collision: 1 changed to 9.
+generating pointers...done.
+extracting boundary entities...
+ 331358 boundary nodes.
+ 331660 boundary faces.
+ 4 boundary face zones.
+done.
+generating cells...done.
+analyzing boundary connectivity...done.
+/exit y
+Auto-Transcript Stop Time:  14:28:01, 15 Mar 2026 Hora Padrão da Argentina 
+Total Transcript Time: 3 Minute 51 Second.

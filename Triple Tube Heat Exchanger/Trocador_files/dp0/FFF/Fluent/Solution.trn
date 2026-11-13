@@ -1,0 +1,138 @@
+Transcript Start Time:  13:20:27, 30 Jan 2026 Hora oficial do Brasil 
+Current Directory: "C:\Users\gusta"
+
+Build Time: Jun 16 2025 10:54:33 EDT 
+Executable Path: C:/PROGRA~1/ANSYSI~1/ANSYSS~1/v252/fluent/ntbin/win64/fluent.exe
+
+----------------------------------------------------------------------------------------------------
+ID    Hostname             Core  O.S.         PID   Vendor                                          
+----------------------------------------------------------------------------------------------------
+n0*   ComputadordeGustavo  1/8  Windows-x64  9716  11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz  
+host  ComputadordeGustavo       Windows-x64  2196  11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz  
+
+MPI Option Selected: intel
+Selected system interconnect: default
+----------------------------------------------------------------------------------------------------
+
+Cortex Process ID: 14452 
+License Server Path: () 
+Multicore SMT processors detected. Processor affinity set!
+Reading "C:\Users\gusta\AppData\Local\Temp\WB_Gustavo_10428_2\wbnew_files\dp0\FFF\MECH\FFF.msh"...
+Buffering for file scan...
+
+  773024 nodes, binary.
+  124360 nodes, binary.
+  489978 quadrilateral interior faces, zone  1, binary.
+  654991 quadrilateral interior faces, zone  2, binary.
+  851657 quadrilateral interior faces, zone  3, binary.
+  278328 mixed interior faces, zone  4, binary.
+   33340 quadrilateral wall faces, zone  5, binary.
+   33340 quadrilateral wall faces, zone  6, binary.
+   33340 quadrilateral wall faces, zone  7, binary.
+   33340 quadrilateral wall faces, zone  8, binary.
+   33340 quadrilateral wall faces, zone  9, binary.
+      61 mixed pressure-outlet faces, zone 16, binary.
+     180 quadrilateral pressure-outlet faces, zone 17, binary.
+     140 quadrilateral velocity-inlet faces, zone 18, binary.
+      61 mixed velocity-inlet faces, zone 19, binary.
+     180 quadrilateral velocity-inlet faces, zone 20, binary.
+     140 quadrilateral pressure-outlet faces, zone 21, binary.
+     240 quadrilateral wall faces, zone 22, binary.
+   33340 quadrilateral wall faces, zone 23, binary.
+   10002 quadrilateral symmetry faces, zone 24, binary.
+   11669 quadrilateral symmetry faces, zone 25, binary.
+   15003 quadrilateral symmetry faces, zone 26, binary.
+    8335 quadrilateral symmetry faces, zone 27, binary.
+   10002 quadrilateral symmetry faces, zone 28, binary.
+   11669 quadrilateral symmetry faces, zone 29, binary.
+   15003 quadrilateral symmetry faces, zone 30, binary.
+    8335 quadrilateral symmetry faces, zone 31, binary.
+  200040 hexahedral cells, zone 10, binary.
+  233380 hexahedral cells, zone 13, binary.
+  300060 hexahedral cells, zone 14, binary.
+  101687 mixed cells, zone 15, binary.
+
+Building...
+     mesh
+     materials,
+     interface,
+     domains,
+     zones,
+	outer_internal_wall-shadow
+	middle_internal_wall-shadow
+	inner_external_wall-shadow
+	middle_external_wall-shadow
+	inner_internal_wall-shadow
+	symmetry_2-inner_fluid
+	symmetry_2-middle_fluid
+	symmetry_2-outer_fluid
+	symmetry_2-part_2-solid
+	symmetry_1-inner_fluid
+	symmetry_1-middle_fluid
+	symmetry_1-outer_fluid
+	symmetry_1-part_2-solid
+	outer_external_wall
+	front_end_walls
+	outer_outlet
+	middle_inlet
+	inner_inlet
+	outer_inlet
+	middle_outlet
+	inner_outlet
+	inner_fluid
+	middle_fluid
+	outer_fluid
+	part_2-solid
+	inner_internal_wall
+	middle_external_wall
+	inner_external_wall
+	middle_internal_wall
+	outer_internal_wall
+	interior-inner_fluid
+	interior-middle_fluid
+	interior-outer_fluid
+	interior-part_2-solid
+     parallel,
+Done.
+
+Preparing mesh for display...
+Done.
+
+Writing Settings file "C:\Users\gusta\AppData\Local\Temp\WB_Gustavo_10428_2\wbnew_files\dp0\FFF\Fluent\FFF.set"...
+	writing rp variables ... Done.
+	writing domain variables ... Done.
+	writing part_2-solid (type solid) (mixture) ... Done.
+	writing outer_fluid (type fluid) (mixture) ... Done.
+	writing middle_fluid (type fluid) (mixture) ... Done.
+	writing inner_fluid (type fluid) (mixture) ... Done.
+	writing interior-part_2-solid (type interior) (mixture) ... Done.
+	writing interior-outer_fluid (type interior) (mixture) ... Done.
+	writing interior-middle_fluid (type interior) (mixture) ... Done.
+	writing interior-inner_fluid (type interior) (mixture) ... Done.
+	writing outer_internal_wall (type wall) (mixture) ... Done.
+	writing middle_internal_wall (type wall) (mixture) ... Done.
+	writing inner_external_wall (type wall) (mixture) ... Done.
+	writing middle_external_wall (type wall) (mixture) ... Done.
+	writing inner_internal_wall (type wall) (mixture) ... Done.
+	writing inner_outlet (type pressure-outlet) (mixture) ... Done.
+	writing middle_outlet (type pressure-outlet) (mixture) ... Done.
+	writing outer_inlet (type velocity-inlet) (mixture) ... Done.
+	writing inner_inlet (type velocity-inlet) (mixture) ... Done.
+	writing middle_inlet (type velocity-inlet) (mixture) ... Done.
+	writing outer_outlet (type pressure-outlet) (mixture) ... Done.
+	writing front_end_walls (type wall) (mixture) ... Done.
+	writing outer_external_wall (type wall) (mixture) ... Done.
+	writing symmetry_1-part_2-solid (type symmetry) (mixture) ... Done.
+	writing symmetry_1-outer_fluid (type symmetry) (mixture) ... Done.
+	writing symmetry_1-middle_fluid (type symmetry) (mixture) ... Done.
+	writing symmetry_1-inner_fluid (type symmetry) (mixture) ... Done.
+	writing symmetry_2-part_2-solid (type symmetry) (mixture) ... Done.
+	writing symmetry_2-outer_fluid (type symmetry) (mixture) ... Done.
+	writing symmetry_2-middle_fluid (type symmetry) (mixture) ... Done.
+	writing symmetry_2-inner_fluid (type symmetry) (mixture) ... Done.
+	writing inner_internal_wall-shadow (type wall) (mixture) ... Done.
+	writing middle_external_wall-shadow (type wall) (mixture) ... Done.
+	writing inner_external_wall-shadow (type wall) (mixture) ... Done.
+	writing middle_internal_wall-shadow (type wall) (mixture) ... Done.
+	writing outer_internal_wall-shadow (type wall) (mixture) ... Done.
+	writing zones map name-id ... Done.

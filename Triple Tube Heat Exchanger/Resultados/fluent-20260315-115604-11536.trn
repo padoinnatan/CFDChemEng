@@ -1,0 +1,39 @@
+Auto-Transcript Start Time:  11:56:05, 15 Mar 2026 Hora Padrão da Argentina 
+Current Directory: "D:\Livro_CFD\OUTROS_MODELOS\TROCADOR_CALOR\Resultados"
+
+              Welcome to ANSYS Fluent 2025 R2.04
+
+              Copyright 1987-2025 ANSYS, Inc. All Rights Reserved.
+              Unauthorized use, distribution or duplication is prohibited.
+              This product is subject to U.S. laws governing export and re-export.
+              For full Legal Notice, see documentation.
+
+Build Time: Oct  7 2025 15:34:38 EDT  Build Id: 10205  
+ 
+Connected License Server List:	<Shared_Web_License_Server>
+
+     --------------------------------------------------------------
+     This is a student version of ANSYS FLUENT. Usage of this product
+     license is limited to the terms and conditions specified in your ANSYS
+     license form, additional terms section.
+     --------------------------------------------------------------
+Host spawning Node 0 on machine "DESKTOP-NB0TTJF" (win64).
+
+---------------------------------------------------------------------------------
+ID    Hostname         Core  O.S.         PID    Vendor                          
+---------------------------------------------------------------------------------
+n0    DESKTOP-NB0TTJF  1/6  Windows-x64  3172   Intel(R) Core(TM) i5-9400F      
+host  DESKTOP-NB0TTJF       Windows-x64  16040  Intel(R) Core(TM) i5-9400F      
+
+MPI Option Selected: intel
+---------------------------------------------------------------------------------
+
+Cleanup script file is D:\\Livro_CFD\\OUTROS_MODELOS\\TROCADOR_CALOR\\Resultados\\cleanup-fluent-DESKTOP-NB0TTJF-16040.bat
+
+Graphics driver currently in use: dx11
+
+(cx-gui-do cx-activate-tab-index "NavigationPane*Frame1(TreeTab)" 0)
+
+Meshing> /exit y
+Auto-Transcript Stop Time:  13:49:55, 15 Mar 2026 Hora Padrão da Argentina 
+Total Transcript Time: 1 Hour 53 Minute 50 Second.

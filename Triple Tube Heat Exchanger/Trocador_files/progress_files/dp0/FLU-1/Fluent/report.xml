@@ -1,0 +1,384 @@
+<FluentXMLReport>
+<version>
+Fluent
+Version: axi, pbns, rngke (axi, pressure-based, RNG k-epsilon)
+Release: 25.2.0
+Title: 
+</version>
+
+<Models>
+
+Models
+------
+
+   Model                              Settings                         
+   -----------------------------------------------------------------
+   Space                              Axisymmetric                     
+   Time                               Steady                           
+   Viscous                            RNG k-epsilon turbulence model   
+   Wall Treatment                     Enhanced Wall Treatment          
+   RNG Differential Viscosity Model   Disabled                         
+   RNG Swirl Dominated Flow Option    Disabled                         
+   Heat Transfer                      Enabled                          
+   Solidification and Melting         Disabled                         
+   Radiation                          None                             
+   Species                            Disabled                         
+   Coupled Dispersed Phase            Disabled                         
+   NOx Pollutants                     Disabled                         
+   SOx Pollutants                     Disabled                         
+   Soot                               Disabled                         
+   Mercury Pollutants                 Disabled                         
+   Structure                          Disabled                         
+   Acoustics                          Disabled                         
+   Eulerian Wall Film                 Disabled                         
+   Potential/Electrochemistry         Disabled                         
+   Multiphase                         Disabled                         
+
+</Models>
+
+<MaterialProperties>
+Material Properties
+-------------------
+
+   Material: water-liquid (fluid)
+
+      Property               Units      Method       Value(s)                                 
+      -------------------------------------------------------------------------------------
+      Density                kg/m^3     polynomial   264.3 6.495 -0.01799 1.492e-05           
+      Cp (Specific Heat)     J/(kg K)   polynomial   45360 -491.6 2.201 -0.004381 3.276e-06   
+      Thermal Conductivity   W/(m K)    polynomial   -0.4943 0.005929 -7.453e-06              
+      Viscosity              kg/(m s)   polynomial   0.1017 -0.0008622 2.457e-06 -2.345e-09   
+
+   Material: steel (solid)
+
+      Property               Units      Method     Value(s)   
+      -----------------------------------------------------
+      Density                kg/m^3     constant   8030       
+      Cp (Specific Heat)     J/(kg K)   constant   502.48     
+      Thermal Conductivity   W/(m K)    constant   16.27      
+
+</MaterialProperties>
+
+<CellZoneConditions>
+Cell Zone Conditions
+--------------------
+
+   Zones
+
+      name           id   type    material       
+      ----------------------------------------
+      inner_fluid    11   fluid   water-liquid   
+      middle_fluid   14   fluid   water-liquid   
+      outer_fluid    12   fluid   water-liquid   
+      outer_solid    92   solid   steel          
+      middle_solid   93   solid   steel          
+      inner_solid    94   solid   steel          
+
+   Setup Conditions
+
+      inner_fluid
+
+         Condition       Value          
+         ----------------------------
+         Material Name   water-liquid   
+         Frame Motion?   no             
+         Mesh Motion?    no             
+
+      middle_fluid
+
+         Condition       Value          
+         ----------------------------
+         Material Name   water-liquid   
+         Frame Motion?   no             
+         Mesh Motion?    no             
+
+      outer_fluid
+
+         Condition       Value          
+         ----------------------------
+         Material Name   water-liquid   
+         Frame Motion?   no             
+         Mesh Motion?    no             
+         Laminar zone?   yes            
+
+      outer_solid
+
+         Condition       Value   
+         ---------------------
+         Material Name   steel   
+         Frame Motion?   no      
+         Mesh Motion?    no      
+
+      middle_solid
+
+         Condition       Value   
+         ---------------------
+         Material Name   steel   
+         Frame Motion?   no      
+         Mesh Motion?    no      
+
+      inner_solid
+
+         Condition       Value   
+         ---------------------
+         Material Name   steel   
+         Frame Motion?   no      
+         Mesh Motion?    no      
+
+</CellZoneConditions>
+
+<BoundaryConditions>
+Boundary Conditions
+-------------------
+
+   Zones
+
+      name                          id    type              
+      ---------------------------------------------------
+      symmetry                      106   axis              
+      middle_internal_wall          9     wall              
+      inner_internal_wall           5     wall              
+      inner_external_wall           8     wall              
+      middle_external_wall          6     wall              
+      outer_internal_wall           7     wall              
+      outer_external_wall           86    wall              
+      front_end_wall-inner_solid    108   wall              
+      front_end_wall-outer_solid    109   wall              
+      front_end_wall-middle_solid   110   wall              
+      outer_inlet                   21    velocity-inlet    
+      middle_outlet                 17    pressure-outlet   
+      inner_outlet                  19    pressure-outlet   
+      outer_outlet                  18    pressure-outlet   
+      middle_inlet                  20    velocity-inlet    
+      inner_inlet                   16    velocity-inlet    
+      outer_internal_wall-shadow    33    wall              
+      middle_external_wall-shadow   34    wall              
+      inner_external_wall-shadow    32    wall              
+      inner_internal_wall-shadow    35    wall              
+      middle_internal_wall-shadow   84    wall              
+
+   Setup Conditions
+
+      symmetry
+
+         Condition   Value   
+         -----------------
+
+      middle_internal_wall
+
+         Condition                  Value             
+         ------------------------------------------
+         Material Name              steel             
+         Thermal BC Type            Coupled           
+         Wall Motion                Stationary Wall   
+         Shear Boundary Condition   No Slip           
+
+      inner_internal_wall
+
+         Condition         Value     
+         -------------------------
+         Material Name     steel     
+         Thermal BC Type   Coupled   
+
+      inner_external_wall
+
+         Condition                  Value             
+         ------------------------------------------
+         Material Name              steel             
+         Thermal BC Type            Coupled           
+         Wall Motion                Stationary Wall   
+         Shear Boundary Condition   No Slip           
+
+      middle_external_wall
+
+         Condition                  Value             
+         ------------------------------------------
+         Material Name              steel             
+         Thermal BC Type            Coupled           
+         Wall Motion                Stationary Wall   
+         Shear Boundary Condition   No Slip           
+
+      outer_internal_wall
+
+         Condition         Value     
+         -------------------------
+         Material Name     steel     
+         Thermal BC Type   Coupled   
+
+      outer_external_wall
+
+         Condition         Value       
+         ---------------------------
+         Material Name     steel       
+         Thermal BC Type   Heat Flux   
+
+      front_end_wall-inner_solid
+
+         Condition         Value       
+         ---------------------------
+         Material Name     steel       
+         Thermal BC Type   Heat Flux   
+
+      front_end_wall-outer_solid
+
+         Condition         Value       
+         ---------------------------
+         Material Name     steel       
+         Thermal BC Type   Heat Flux   
+
+      front_end_wall-middle_solid
+
+         Condition         Value       
+         ---------------------------
+         Material Name     steel       
+         Thermal BC Type   Heat Flux   
+
+      outer_inlet
+
+         Condition                  Value    
+         ---------------------------------
+         Velocity Magnitude [m/s]   0.05     
+         Temperature [K]            290.15   
+
+      middle_outlet
+
+         Condition   Value   
+         -----------------
+
+      inner_outlet
+
+         Condition   Value   
+         -----------------
+
+      outer_outlet
+
+         Condition   Value   
+         -----------------
+
+      middle_inlet
+
+         Condition                  Value    
+         ---------------------------------
+         Velocity Magnitude [m/s]   0.1      
+         Temperature [K]            343.15   
+
+      inner_inlet
+
+         Condition                  Value    
+         ---------------------------------
+         Velocity Magnitude [m/s]   0.7      
+         Temperature [K]            283.15   
+
+      outer_internal_wall-shadow
+
+         Condition                  Value             
+         ------------------------------------------
+         Material Name              steel             
+         Thermal BC Type            Coupled           
+         Wall Motion                Stationary Wall   
+         Shear Boundary Condition   No Slip           
+
+      middle_external_wall-shadow
+
+         Condition         Value     
+         -------------------------
+         Material Name     steel     
+         Thermal BC Type   Coupled   
+
+      inner_external_wall-shadow
+
+         Condition         Value     
+         -------------------------
+         Material Name     steel     
+         Thermal BC Type   Coupled   
+
+      inner_internal_wall-shadow
+
+         Condition                  Value             
+         ------------------------------------------
+         Material Name              steel             
+         Thermal BC Type            Coupled           
+         Wall Motion                Stationary Wall   
+         Shear Boundary Condition   No Slip           
+
+      middle_internal_wall-shadow
+
+         Condition         Value     
+         -------------------------
+         Material Name     steel     
+         Thermal BC Type   Coupled   
+
+</BoundaryConditions>
+
+<SolverSettings>
+Solver Settings
+---------------
+
+   Equations
+
+      Equation     Solved   
+      -------------------
+      Flow         yes      
+      Turbulence   yes      
+      Energy       yes      
+
+   Numerics
+
+      Numeric                         Enabled   
+      ---------------------------------------
+      Absolute Velocity Formulation   yes       
+
+   Pseudo Time Explicit Relaxation Factors
+
+      Variable                     Relaxation Factor   
+      ----------------------------------------------
+      Density                      1                   
+      Body Forces                  1                   
+      Turbulent Kinetic Energy     0.75                
+      Turbulent Dissipation Rate   0.75                
+      Turbulent Viscosity          1                   
+      Energy                       0.75                
+      Explicit Momentum            0.5                 
+      Explicit Pressure            0.5                 
+
+   Linear Solver
+
+      Variable                     Solver Type   Termination Criterion   Residual Reduction Tolerance   
+      -----------------------------------------------------------------------------------------------
+      Flow                         F-Cycle       0.1                                                    
+      Turbulent Kinetic Energy     F-Cycle       0.1                                                    
+      Turbulent Dissipation Rate   F-Cycle       0.1                                                    
+      Energy                       F-Cycle       0.1                                                    
+
+   Pressure-Velocity Coupling
+
+      Parameter                               Value     
+      -----------------------------------------------
+      Type                                    Coupled   
+      Pseudo Time Method (Global Time Step)   yes       
+
+   Discretization Scheme
+
+      Variable                     Scheme                
+      ------------------------------------------------
+      Pressure                     Second Order          
+      Momentum                     Second Order Upwind   
+      Turbulent Kinetic Energy     First Order Upwind    
+      Turbulent Dissipation Rate   First Order Upwind    
+      Energy                       Second Order Upwind   
+
+   Solution Limits
+
+      Quantity                                   Limit    
+      -------------------------------------------------
+      Minimum Absolute Pressure [Pa]             1        
+      Maximum Absolute Pressure [Pa]             5e+10    
+      Minimum Static Temperature [K]             1        
+      Maximum Static Temperature [K]             5000     
+      Minimum Turb. Kinetic Energy [m^2/s^2]     1e-14    
+      Minimum Turb. Dissipation Rate [m^2/s^3]   1e-20    
+      Maximum Turb. Viscosity Ratio              100000   
+
+</SolverSettings>
+
+</FluentXMLReport>
