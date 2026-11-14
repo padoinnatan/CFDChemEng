@@ -1,0 +1,17 @@
+TODAS:
+	1.5e7 raios
+	malha 0.75 mm
+	1 filtro.
+
+66F - irradiancia max: 2500 W/m^2
+
+63F - irradiancia max: 3800 W/m^2
+
+48F - irradiancia max: 3000 W/m^2
+
+66X - irradiancia max: 5000 W/m^2
+
+63X - irradiancia max: 6000 W/m^2
+
+48X - irradiancia max: 5000 W/m^2
+	
